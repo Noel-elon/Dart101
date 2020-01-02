@@ -55,6 +55,23 @@ main() {
     if (i > 5) break;
     print(i);
   }
+
+  //COLLECTIONS
+
+  //List
+  List names = ['jo', 'jill'];
+  print(names[0]);
+
+  //Set
+  var noels = {'Noe', 'Nwaelugo'};
+  Set peeps = {};
+  //Maps
+  var gift = {
+    'first' : 'Noel',
+  'Second' : 3,
+  };
+  var gift2 = Map();
+
   //converting to string
   var num = 23.toString();
   const num2 = 45;
