@@ -83,7 +83,40 @@ main() {
   nmber = n?.num ?? 0;
 //the ??= operator is used to assign a value to a variable if it is null
   nmber ??= 100;
+  //caling the named functions
+sum(num1: 23, num2: 24);
+
 }
+//A function that squares a number
+dynamic square(var num){
+  return num * num;
+}
+//another void function
+void showOutput(msg){
+  print(msg);
+}
+
+
+
+
+
+//Arrow function =>
+dynamic square2(var num) => num * num;
+
+//functions with no name..caled anonymous func or lambda in other languages
+var lis = {'appes', 'banana', 'NOel'};
+
+//positional parameters you define the parameters in the order theu were initialized
+//named params (they are optional) but we have to check if they are null
+dynamic sum({var num1, var num2}) => num1 + (num2?? 0); //or we can pass a default value
+//we can aso mix named and positional params
+//we can make positional parameters optional by putting them in square braces
+
+
+
+//CLASSES
+
+
 
 class Num {
   int num = 10;
