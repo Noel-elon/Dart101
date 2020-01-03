@@ -76,11 +76,11 @@ main() {
   var num = 23.toString();
   const num2 = 45;
 
-  var n = Num();
+  var n = Num('norl');
   int nmber;
   //question mark after the variable name is used to check for nulPointer Exceptions
   //the double queston mark is used to assign a default value
-  nmber = n?.num ?? 0;
+ // nmber = n?.num ?? 0;
 //the ??= operator is used to assign a value to a variable if it is null
   nmber ??= 100;
   //caling the named functions
@@ -115,9 +115,66 @@ dynamic sum({var num1, var num2}) => num1 + (num2?? 0); //or we can pass a defau
 
 
 //CLASSES
+class Person{
+  String name;
+  int age;
 
+  //constructor
+  //Defining a default age doesnt mean irs parmanent it just means that you dont have to define a new age
+  Person(String name, [int age =18]){
+    this.name = name;
+    this.age = age;
+  }
+  //or
+ // Person(this.name, [this.age = 18]);
+
+  // named constructor
+  Person.guest(){
+    name = 'Guest';
+    age = 56;
+  }
+
+  void showOutput(){
+    print(name);
+    print(age);
+  }
+}
 
 
 class Num {
-  int num = 10;
+  //final keyword means the variable cant be changed after assigning it with the constructor, it can only be changed when we assign again usong the constructor
+  final name6;
+  //const means the vaue must be assigned there ad it cant be changed at all
+  static const int age = 10;
+  Num(this.name6);
+
+}
+
+//you can inherit a class using the extends keyword
+class Human extends Person{
+  int lifeSpan;
+  //this is where we cal the params from the super class using the : and super keyword
+  Human(this.lifeSpan, int age, String name) : super(name, age);
+
+  //calling a method from the super class we use the super keyword too
+void showOutput(){
+  super.showOutput();
+  print(lifeSpan);
+}
+//to override a methis that was in the super class use @override
+
+}
+
+//Getters and setters
+class Rectangle {
+  //num keyword is for doubes and integers
+  num left, top, width, height;
+  Rectangle(this.left, this.width,this.height, this.top);
+
+  num get right => left + width;
+  set right(num value) => left = value - width;
+  num get bottom => top + height;
+  set bottom(num value) => top = value - height;
+
+
 }
