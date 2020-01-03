@@ -3,6 +3,7 @@ import 'dart:io';
 
 ///@author: Nwaelugo Noel
 ///noelnwaelugo@gmail.com
+///This is me tryna learn dart
 main() {
   //just like scanners in java
   //stdout.writeln('what is your name?');
@@ -176,5 +177,8 @@ class Rectangle {
   num get bottom => top + height;
   set bottom(num value) => top = value - height;
 
+
+  //exception handling
+//try catch
 
 }
